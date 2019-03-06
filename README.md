@@ -1,1 +1,3 @@
-# magical-inbox-assignment
+# Quasar App
+
+> WIP
