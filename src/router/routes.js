@@ -2,15 +2,23 @@
 const routes = [
   {
     path: '/',
-    redirect: { name: 'inbox' }
+    redirect: { name: 'inbox.index' }
   },
   {
     path: '/inbox',
-    name: 'inbox',
     component: () => import('layouts/BaseLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Index.vue') },
-      { path: '/:id', props: true, component: () => import('pages/Index.vue') }
+      {
+        path: '',
+        name: 'inbox.index',
+        component: () => import('pages/Inbox.vue')
+      },
+      {
+        path: ':id',
+        name: 'inbox.show',
+        props: true,
+        component: () => import('pages/Inbox.vue')
+      }
     ]
   }
 ]
