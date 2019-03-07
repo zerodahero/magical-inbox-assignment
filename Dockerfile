@@ -14,4 +14,4 @@ FROM nginx:alpine
 
 LABEL maintainer="zachary.teska@gmail.com"
 
-COPY --from=BUILDER /build/dist /usr/share/nginx/html
+COPY --from=BUILDER /build/dist/spa /usr/share/nginx/html
